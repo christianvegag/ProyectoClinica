@@ -19,8 +19,7 @@ export class UsermaintenanceComponent implements OnInit {
     mothersLastName: '',
     address: '',
     ubigeoCode: '',
-    provincia: '',
-    distrito: '',
+    district: '',
     phone: '',
     email: '',
     password: ''
@@ -41,8 +40,6 @@ export class UsermaintenanceComponent implements OnInit {
         mothersLastName: this.user.mothersLastName,
         address: this.user.address,
         ubigeoCode: this.user.ubigeoCode,
-        provincia: this.user.provincia,
-        distrito: this.user.distrito,
         phone: this.user.phone,
         email: this.user.email,
         password: this.user.password

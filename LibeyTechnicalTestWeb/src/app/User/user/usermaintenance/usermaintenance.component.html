@@ -1,6 +1,5 @@
-<form #userForm="ngForm" style="padding-right: 5%; padding-left: 5%;">
-	<div class="card"
-		style="width: 100%; margin-top: 2rem; background-color:#edf2f6; border-radius: 10px; height: 70em;">
+<form #userForm="ngForm" style="padding-right: 5%; padding-left: 5%; ">
+	<div class="card" style="width: 100%;margin-top: 2rem;background-color:#edf2f6;border-radius: 10px; height: 70em; " >
 		<div class="card-header"><b>Mantenimiento de usuario</b></div>
 		<div class="card mb-4 mt-4">
 			<ul class="nav">
@@ -10,12 +9,49 @@
 							<svg width="20" height="17" viewBox="0 0 14 14" fill="none">
 								<path
 									d="M11.6667 1H2.33333C1.59695 1 1 1.59695 1 2.33333V11.6667C1 12.403 1.59695 13 2.33333 13H11.6667C12.403 13 13 12.403 13 11.6667V2.33333C13 1.59695 12.403 1 11.6667 1Z"
-									stroke="#38E8C6" stroke-linecap="round" stroke-linejoin="round" />
+									stroke="#38E8C6"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
 								<path d="M1 5H13" stroke="#38E8C6" stroke-linecap="round" stroke-linejoin="round" />
 								<path d="M5 13V5" stroke="#38E8C6" stroke-linecap="round" stroke-linejoin="round" />
 							</svg>
 						</span>
 						Guardar
+					</a>
+				</button>
+				<button type="button" class="btn-toolbar">
+					<a href="/user/maintenance" class="nav-link text-toolbar">
+						<span>
+							<svg width="20" height="17" viewBox="0 0 14 14" fill="none">
+								<path
+									d="M11.6667 1H2.33333C1.59695 1 1 1.59695 1 2.33333V11.6667C1 12.403 1.59695 13 2.33333 13H11.6667C12.403 13 13 12.403 13 11.6667V2.33333C13 1.59695 12.403 1 11.6667 1Z"
+									stroke="#38E8C6"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path d="M1 5H13" stroke="#38E8C6" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M5 13V5" stroke="#38E8C6" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						Limpiar
+					</a>
+				</button>
+				<button type="button" class="btn-toolbar">
+					<a href="/user/card" class="nav-link text-toolbar">
+						<span>
+							<svg width="20" height="17" viewBox="0 0 14 14" fill="none">
+								<path
+									d="M11.6667 1H2.33333C1.59695 1 1 1.59695 1 2.33333V11.6667C1 12.403 1.59695 13 2.33333 13H11.6667C12.403 13 13 12.403 13 11.6667V2.33333C13 1.59695 12.403 1 11.6667 1Z"
+									stroke="#38E8C6"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path d="M1 5H13" stroke="#38E8C6" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M5 13V5" stroke="#38E8C6" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</span>
+						Volver
 					</a>
 				</button>
 			</ul>
@@ -52,14 +88,14 @@
 			<div class="row pb-2">
 				<div class="col-lg-2">Departamento</div>
 				<div class="col-lg-4">
-					<ng-select [(ngModel)]="user.ubigeoCode" placeholder="Seleccione" class="ng-select-solid"
-						name="ubigeoCode" required>
+					<ng-select placeholder="Seleccione" class="ng-select-solid"
+						name="departamento" required>
 						<ng-option value="1">Lima</ng-option>
 					</ng-select>
 				</div>
 				<div class="col-lg-2">Provincia</div>
 				<div class="col-lg-4">
-					<ng-select [(ngModel)]="user.provincia" placeholder="Seleccione" class="ng-select-solid"
+					<ng-select placeholder="Seleccione" class="ng-select-solid"
 						name="provincia" required>
 						<ng-option value="1">Lima</ng-option>
 					</ng-select>
@@ -68,7 +104,7 @@
 			<div class="row pb-2">
 				<div class="col-lg-2">Distrito</div>
 				<div class="col-lg-4">
-					<ng-select [(ngModel)]="user.distrito" placeholder="Seleccione" class="ng-select-solid"
+					<ng-select [(ngModel)]="user.ubigeoCode" placeholder="Seleccione" class="ng-select-solid"
 						name="distrito" required>
 						<ng-option value="1">Villa el Salvador</ng-option>
 					</ng-select>

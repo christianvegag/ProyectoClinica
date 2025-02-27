@@ -6,9 +6,11 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { RouterModule } from "@angular/router";
 import { UserModule } from "./User/user/user.module";
+import { UsersearchComponent } from './User/user/usersearch/usersearch.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
-	declarations: [AppComponent],
-	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, RouterModule,HttpClientModule , UserModule],
+	declarations: [AppComponent, UsersearchComponent],
+	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, RouterModule,HttpClientModule ,FormsModule, UserModule],
 	providers: [],
 	bootstrap: [AppComponent],
 })

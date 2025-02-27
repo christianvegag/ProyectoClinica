@@ -1,0 +1,72 @@
+<form #userForm="ngForm" style="padding-right: 5%; padding-left: 5%;">
+    <div class="card"
+        style="width: 100%; margin-top: 2rem; background-color: #edf2f6; border-radius: 10px; height: 70em;">
+        <div class="card-header"><b>Detalle de Usuario</b></div>
+        <div class="card mb-4 mt-4">
+
+            <button type="button" class="btn-toolbar">
+                <a href="/user/card" class="nav-link text-toolbar">
+                    <span>
+                        <svg width="20" height="17" viewBox="0 0 14 14" fill="none">
+                            <path
+                                d="M11.6667 1H2.33333C1.59695 1 1 1.59695 1 2.33333V11.6667C1 12.403 1.59695 13 2.33333 13H11.6667C12.403 13 13 12.403 13 11.6667V2.33333C13 1.59695 12.403 1 11.6667 1Z"
+                                stroke="#38E8C6" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1 5H13" stroke="#38E8C6" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5 13V5" stroke="#38E8C6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    Volver
+                </a>
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="row pb-2">
+                <div class="col-lg-2">Número de Documento</div>
+                <div class="col-lg-4">
+                    <input type="text" class="form-control form-control-sm" [(ngModel)]="documentNumber"
+                        name="documentNumber" placeholder="Ingresa el número de documento" />
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary" (click)="searchUser()">Buscar</button>
+                </div>
+            </div>
+
+            <div *ngIf="user && user.documentNumber">
+                <div class="row pb-2">
+                    <div class="col-lg-2"><b>Tipo de Documento:</b></div>
+                    <div class="col-lg-4">{{ user.documentTypeId }}</div>
+                    <div class="col-lg-2"><b>Documento:</b></div>
+                    <div class="col-lg-4">{{ user.documentNumber }}</div>
+                </div>
+                <div class="row pb-2">
+                    <div class="col-lg-2"><b>Nombre:</b></div>
+                    <div class="col-lg-4">{{ user.name }}</div>
+                    <div class="col-lg-2"><b>Apellido Paterno:</b></div>
+                    <div class="col-lg-4">{{ user.fathersLastName }}</div>
+                </div>
+                <div class="row pb-2">
+                    <div class="col-lg-2"><b>Apellido Materno:</b></div>
+                    <div class="col-lg-4">{{ user.mothersLastName }}</div>
+                    <div class="col-lg-2"><b>Dirección:</b></div>
+                    <div class="col-lg-4">{{ user.address }}</div>
+                </div>
+                <div class="row pb-2">
+                    <div class="col-lg-2"><b>Ubigeo:</b></div>
+                    <div class="col-lg-4">{{ user.ubigeoCode }}</div>
+                    <div class="col-lg-2"><b>Teléfono:</b></div>
+                    <div class="col-lg-4">{{ user.phone }}</div>
+                </div>
+                <div class="row pb-2">
+                    <div class="col-lg-2"><b>Correo:</b></div>
+                    <div class="col-lg-4">{{ user.email }}</div>
+                    <div class="col-lg-2"><b>Activo:</b></div>
+                    <div class="col-lg-4">{{ user.active }}</div>
+                </div>
+            </div>
+
+            <div *ngIf="!user.documentNumber && documentNumber">
+                <p>No se encontró un usuario con ese número de documento.</p>
+            </div>
+        </div>
+    </div>
+</form>
